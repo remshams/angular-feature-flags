@@ -1,0 +1,6 @@
+<p *ngIf="isNewFeatureEnabled; else featureDisabled">
+  WithoutDirectiveComponent: Feauture enabled
+</p>
+<ng-template #featureDisabled>
+  <p>WithoutDirectiveComponent: Feature disabled</p>
+</ng-template>

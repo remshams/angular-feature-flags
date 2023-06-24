@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FeatureService } from './feature-flags/feature.service';
+import { WithoutDirectiveComponent } from './feature-flags/components/without-directive/without.components';
 
 const initFeatureServiceFactory = (featureService: FeatureService) => {
   return () => featureService.init();
@@ -11,7 +12,7 @@ const initFeatureServiceFactory = (featureService: FeatureService) => {
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, HttpClientModule],
+  imports: [BrowserModule, HttpClientModule, WithoutDirectiveComponent],
   providers: [
     {
       provide: APP_INITIALIZER,
