@@ -26,4 +26,8 @@ export class FeatureService {
       });
     return result;
   }
+
+  isFeatureEnabled(name: string): boolean {
+    return this.featuresFlags[name];
+  }
 }
